@@ -76,6 +76,7 @@ public class InstallMojo extends AbstractMojo {
 
 		for (String table : tables) {
 			if (table != null && table.trim().length() > 0) {
+				getLog().info(table);
 				stmt.execute(table.trim() + ";");
 			}
 		}
